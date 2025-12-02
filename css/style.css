@@ -1,0 +1,265 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #020612;
+
+
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.open {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0.5rem 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skill-item {
+    background: #2c2c2c;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 150px;
+}
+
+/* Projects Grid */
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background: #2c2c2c;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+/* Contact Form */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #2c2c2c;
+    color: white;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    padding: 0.75rem 2rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #45a049;
+}
+
+#form-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    /* Navigation for Tablet/Desktop */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        margin-bottom: 0;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+    
+    .nav-links li {
+        margin: 0 1rem;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    /* Hero Content */
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-content p {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0 4rem;
+    }
+    
+    section {
+        padding: 6rem 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+}
